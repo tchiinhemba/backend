@@ -3,7 +3,7 @@
 function HomePage() {
     return (
         <div>
-            Teste
+            This is my index js as main page
         </div>
     )
 }
