@@ -2,16 +2,19 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "my portfolio backend repo",
-  "main": "index.js",
+  "main": "/src/server.js",
   "scripts": {
+    "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eladioclaudio/backend.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "heroku"
+  ],
+  "author": "eladioclaudio",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eladioclaudio/backend/issues"
@@ -21,7 +24,8 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3"
   },
-  "engine": [
-    "node"
-  ]
+  "engines": {
+    "node": "16.x",
+    "yarn": "1.x"
+  }
 }
