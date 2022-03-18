@@ -1,15 +1,21 @@
 
+const express = require('express');
+const router = express.Router();
 
-const express = require('express')
-const router = express.Router()
+const skillsController = require('../controllers/api/skillsController');
+const certificationsController = require('../controllers/api/certificationsController');
+const servicesController = require('../controllers/api/servicesController');
+const projectsController = require('../controllers/api/projectsController');
 
-
-router 
-.get('/', (req, res) => {
-    res.json([
-        { teste: "testando" }
-    ])
-})
+const homeController = require('../controllers/homeController');
 
 
-module.exports = router
+router
+    .get('/skills', skillsController.skills)
+    .get('/certifications', certificationsController.certifications)
+    .get('/services', servicesController.services)
+    .get('/projects', projectsController.projects)
+    .get('/', homeController.home)
+
+
+module.exports = router;
