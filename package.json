@@ -4,7 +4,7 @@
   "description": "my portfolio backend repo",
   "main": "/src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js --ignore public --ignore frontend",
+    "start": "node src/server.js",
     "dev": "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
