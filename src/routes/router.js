@@ -1,14 +1,21 @@
 
 const express = require('express');
-
-const skillsController = require('../controllers/skillsController');
-const certificationsController = require('../controllers/certificationsController')
-
 const router = express.Router();
 
+const skillsController = require('../controllers/api/skillsController');
+const certificationsController = require('../controllers/api/certificationsController');
+const servicesController = require('../controllers/api/servicesController');
+const projectsController = require('../controllers/api/projectsController');
+
+const homeController = require('../controllers/homeController');
+
+
 router
-    .get('/', skillsController.skills)
+    .get('/skills', skillsController.skills)
     .get('/certifications', certificationsController.certifications)
+    .get('/services', servicesController.services)
+    .get('/projects', projectsController.projects)
+    .get('/', homeController.home)
 
 
 module.exports = router;
