@@ -1,15 +1,14 @@
 
+const express = require('express');
 
-const express = require('express')
-const router = express.Router()
+const skillsController = require('../controllers/skillsController');
+const certificationsController = require('../controllers/certificationsController')
+
+const router = express.Router();
+
+router
+    .get('/', skillsController.skills)
+    .get('/certifications', certificationsController.certifications)
 
 
-router 
-.get('/', (req, res) => {
-    res.json([
-        { teste: "testando" }
-    ])
-})
-
-
-module.exports = router
+module.exports = router;
