@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "my portfolio backend repo",
-  "main": "/src/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node server.js",
     "dev": "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,7 +31,8 @@
     "style-loader": "^3.3.1"
   },
   "engines": {
-    "node": "14.x"
+    "yarn": "1.x",
+    "node": "16.x"
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
